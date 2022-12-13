@@ -6,7 +6,7 @@
 /*   By: aucousin <aucousin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 17:25:18 by aucousin          #+#    #+#             */
-/*   Updated: 2022/12/07 17:31:17 by aucousin         ###   ########lyon.fr   */
+/*   Updated: 2022/12/10 16:26:32 by aucousin         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,6 @@ int	cube_checkmap_newline(char *str, char charset, int nb)
 		i++;
 	tmp = '\0';
 	end = ft_mapend(str);
-	ft_printf("start = %d\nend = %d\n", i, end);
 	while (str[i] && i < end)
 	{
 		if (str[i] == '\n' && tmp == '\n')

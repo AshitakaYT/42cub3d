@@ -6,7 +6,7 @@
 /*   By: aucousin <aucousin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 15:08:00 by aucousin          #+#    #+#             */
-/*   Updated: 2022/12/07 17:57:51 by aucousin         ###   ########lyon.fr   */
+/*   Updated: 2022/12/13 14:40:24 by aucousin         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ int	cube_checkcolor(char *str)
 	int	g;
 
 	i = 0;
+	if (!str)
+		return (-1);
 	while (str[i] && str[i] == ' ')
 		i++;
 	i++;
@@ -90,11 +92,8 @@ int	cube_checkcolor(char *str)
 	i++;
 	b = cube_atoi(str, &i);
 	while (str[i])
-	{
-		if (str[i] != ' ')
+		if (str[i++] != ' ')
 			return (-1);
-		i++;
-	}
 	if (r == -1 || b == -1 || g == -1)
 		return (-1);
 	return (0);
@@ -102,10 +101,10 @@ int	cube_checkcolor(char *str)
 
 int	cube_checkelems(t_cube *c)
 {
-	if (cube_check_elem(c->el->elems, "NO ")
-		&& cube_check_elem(c->el->elems, "SO ")
-		&& cube_check_elem(c->el->elems, "EA ")
-		&& cube_check_elem(c->el->elems, "WE ")
+	if (cube_check_elem(c->el->elems, "NO ") != NULL
+		&& cube_check_elem(c->el->elems, "SO ") != NULL
+		&& cube_check_elem(c->el->elems, "EA ") != NULL
+		&& cube_check_elem(c->el->elems, "WE ") != NULL
 		&& cube_checkcolor(cube_check_elem(c->el->elems, "F ")) != -1
 		&& cube_checkcolor(cube_check_elem(c->el->elems, "C ")) != -1)
 		return (0);

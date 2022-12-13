@@ -1,5 +1,5 @@
-NAME = cub3d
-NAME_BONUS = cub3d_bonus
+NAME = cub3D
+NAME_BONUS = cub3D_bonus
 
 SRC = 	main.c \
 		srcs/mandatory/parsing/parsing_main.c srcs/mandatory/parsing/checkmap_newline.c srcs/mandatory/parsing/checkmap_closed.c srcs/mandatory/parsing/checkmap_init.c srcs/mandatory/parsing/checkmap.c srcs/mandatory/parsing/check_elems.c srcs/mandatory/parsing/check_elems2.c srcs/mandatory/parsing/get_elems.c srcs/mandatory/parsing/print_cubeinfos.c srcs/mandatory/parsing/free.c \
